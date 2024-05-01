@@ -1,4 +1,3 @@
-import { useEffect } from "react"
 import { useAppDispatch } from "../../app/hooks"
 import { fetchAllEntities } from "./entitiesSlice";
 import { deleteControllers, fetchControllers } from "./controllersSlice"
@@ -10,7 +9,7 @@ export const Entities = () => {
   return (
     <div>
       <h1>Entities</h1>
-      <button onClick={() => dispatch(fetchControllers())}>
+      <button onClick={() => dispatch(fetchControllers('1'))}>
         Load Controllers
       </button>
       <button onClick={() => dispatch(fetchSites())}>

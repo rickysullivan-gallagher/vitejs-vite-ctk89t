@@ -33,8 +33,8 @@ export const controllersSlice = createAppSlice({
         controllersAdapter.removeAll(state)
       }),
       fetchControllers: asyncThunk(
-        async (id: string) => {
-          return Promise.resolve([{ id, name: "Controller 1" }])
+        async (_) => {
+          return Promise.resolve([{ name: "Controller 1" }])
         },
         {
           pending: state => {
