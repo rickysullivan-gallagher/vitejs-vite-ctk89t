@@ -9,7 +9,7 @@ export const Entities = () => {
   return (
     <div>
       <h1>Entities</h1>
-      <button onClick={() => dispatch(fetchControllers('1'))}>
+      <button onClick={() => dispatch(fetchControllers())}>
         Load Controllers
       </button>
       <button onClick={() => dispatch(fetchSites())}>
