@@ -1,9 +1,11 @@
 import { combineReducers } from "@reduxjs/toolkit"
+
 import sitesReducer, { sitesSlice, fetchSites } from "./sitesSlice"
 import controllersReducer, {
   controllersSlice,
   fetchControllers,
 } from "./controllersSlice"
+
 import { createAppSlice } from "../../app/createAppSlice"
 
 const entitiesReducer = combineReducers({
