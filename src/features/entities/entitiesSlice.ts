@@ -22,7 +22,7 @@ export const entitiesSlice = createAppSlice({
           dispatch(fetchControllers()),
           dispatch(fetchSites()),
         ]).then(() => {
-          console.log("entities: loadAllEntities")
+          console.log("entities: fetchAllEntities")
         })
       }),
     }
