@@ -29,7 +29,6 @@ export const controllersSlice = createAppSlice({
   reducers: ({ reducer, asyncThunk }) => {
     return {
       deleteControllers: reducer(state => {
-        debugger
         controllersAdapter.removeAll(state)
       }),
       fetchControllers: asyncThunk(
@@ -54,12 +53,9 @@ export const controllersSlice = createAppSlice({
     }
   },
   extraReducers: builder => {
-    builder.addCase(fetchControllers.fulfilled, (state, action) => {
-      debugger
-    }),
-      builder.addMatcher(isFetchAllEntities, (state, action) => {
-        console.log("controller: fetchAllEntities")
-      })
+    builder.addMatcher(isFetchAllEntities, (state, action) => {
+      console.log("controller: fetchAllEntities")
+    })
   },
 })
 

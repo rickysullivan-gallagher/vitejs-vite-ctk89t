@@ -54,7 +54,7 @@ export const sitesSlice = createAppSlice({
   },
   extraReducers: builder => {
     builder.addMatcher(isFetchAllEntities, (state, action) => {
-      console.log("site: loadAllEntities")
+      console.log("site: fetchAllEntities")
     })
   },
 })
