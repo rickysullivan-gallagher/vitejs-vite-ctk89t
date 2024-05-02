@@ -32,8 +32,8 @@ export const sitesSlice = createAppSlice({
         sitesAdapter.removeAll(state)
       }),
       fetchSites: asyncThunk(
-        async (id: string) => {
-          return Promise.resolve([{ id, name: "Site 1" }])
+        async (_) => {
+          return Promise.resolve([{ name: "Site 1" }])
         },
         {
           pending: state => {

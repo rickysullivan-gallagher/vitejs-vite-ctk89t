@@ -1,9 +1,11 @@
-import { combineReducers, combineSlices } from "@reduxjs/toolkit"
+import { combineReducers } from "@reduxjs/toolkit"
+
 import sitesReducer, { sitesSlice, fetchSites } from "./sitesSlice"
 import controllersReducer, {
   controllersSlice,
   fetchControllers,
 } from "./controllersSlice"
+
 import { createAppSlice } from "../../app/createAppSlice"
 
 const entitiesReducer = combineReducers({
@@ -19,8 +21,8 @@ export const entitiesSlice = createAppSlice({
       fetchAllEntities: asyncThunk(async (_, thunkAPI) => {
         const dispatch = thunkAPI.dispatch
         return Promise.all([
-          dispatch(fetchControllers("1")),
-          dispatch(fetchSites("2")),
+          dispatch(fetchControllers()),
+          dispatch(fetchSites()),
         ]).then(() => {
           console.log("entities: fetchAllEntities")
         })

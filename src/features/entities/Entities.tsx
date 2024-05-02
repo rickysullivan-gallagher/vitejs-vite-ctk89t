@@ -1,8 +1,8 @@
-import { useEffect } from "react"
-import { useAppDispatch } from "../../app/hooks"
 import { fetchAllEntities } from "./entitiesSlice";
 import { deleteControllers, fetchControllers } from "./controllersSlice"
 import { deleteSites, fetchSites } from "./sitesSlice";
+
+import { useAppDispatch } from "../../app/hooks"
 
 export const Entities = () => {
   const dispatch = useAppDispatch()
